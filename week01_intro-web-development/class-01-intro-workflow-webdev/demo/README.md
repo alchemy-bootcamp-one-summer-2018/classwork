@@ -16,9 +16,9 @@ Demo work for lab
 
 ## `prompt`, `alert`, and `confirm`
 
-`prompt` - user gives back a response
-`confirm` - user says ok or cancel
-`alert` - message to the user
+* `prompt` - user gives back a response
+* `confirm` - user says ok or cancel
+* `alert` - message to the user
 
 * Interact with user from JavaScript
 * `console.log()` writes to console.

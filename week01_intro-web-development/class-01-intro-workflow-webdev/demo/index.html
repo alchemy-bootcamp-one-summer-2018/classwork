@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ask Questions</title>
+</head>
+<body>
+    <p>What is your name?</p>
+    <p>What is your favorite food?</p>
+    <p>Do you love cats?</p>
+    <script>
+        var username = prompt('What is your name?');
+        console.log('User name is', username);
+
+        alert('Hi ' + username + '! Nice to meet you');
+        
+        var favoriteFood = prompt('What is your favorite food?');
+        console.log('Favorite food is', favoriteFood);
+
+        alert('Wow ' + username + ', didn\'t know you liked ' + favoriteFood);
+
+        var lovesCats = confirm('Do you love cats?');
+        console.log('Loves cats', lovesCats);
+
+        if(lovesCats) {
+            alert('Of course ' + username + '! ' + 
+                'Who doesn\'t love cats, and they share your ' + 
+                favoriteFood
+            );
+        }
+        else {
+            alert('Wow, that\'s suprising ' + username + 
+                ' I bet you eat ' + favoriteFood + ' alone.'
+            );
+        }
+    </script>
+</body>
+</html>
