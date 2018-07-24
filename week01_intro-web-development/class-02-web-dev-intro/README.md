@@ -7,14 +7,12 @@ Class 02 Intro to Web Development
 ## Pregenda
 
 1. Code Review
-1. Toolbox
-    * Config eslint
 1. Process
     * Lab and git mechanics are available
-    * Reivew Developer
+    * Review Developer
         * 15 Minute Rule
         * Professional Software Development
-1. Config eslint
+1. Toolbox - config eslint
     * Install: `npm install -g eslint-plugin-html`
     * Add `html` to `"eslint.validate"` VSCode setting
     * Review `.travis.yml` file and add to each lab
@@ -72,6 +70,12 @@ Functions | Run code on demand
     * `#id { }`
 * Key/Value pairs!
     * `property: value;`
+
+## Styling
+
+* Whitespace (padding and margins)
+* Fonts - https://fonts.google.com/specimen/Gaegu?selection.family=Gaegu
+* Colors - https://www.colourlovers.com/
 
 ## Html, CSS, JS and the DOM
 
