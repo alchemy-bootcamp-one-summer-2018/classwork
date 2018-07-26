@@ -23,7 +23,6 @@
             "ignoreEOLComments": true
         }
       ],
-      "no-trailing-spaces": "warn",
       "new-cap": "error",
       "no-redeclare": [
         "error",
