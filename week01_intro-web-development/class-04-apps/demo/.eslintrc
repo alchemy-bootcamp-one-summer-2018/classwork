@@ -13,14 +13,16 @@
     "rules": {
       "eqeqeq": ["error", "always"],
       "no-console": "off",
-      "indent": ["error", 4, { "SwitchCase": 1 }],
+      "indent": ["error", 4, { 
+        "SwitchCase": 1,
+        "ignoreComments": true
+      }],
       "quotes": ["warn", "single"],
       "no-multi-spaces": ["error",
         {
             "ignoreEOLComments": true
         }
       ],
-      "no-trailing-spaces": "warn",
       "new-cap": "error",
       "no-redeclare": [
         "error",
