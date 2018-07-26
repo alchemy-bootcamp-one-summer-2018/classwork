@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Multiple Checkboxes</h1>
+    <form id="form" onsubmit="return getCheckboxGroup()">
+        <label><input name="group" type="checkbox" value="one"> one</label>
+        <label><input name="group" type="checkbox" value="two"> two</label>
+        <label><input name="group" type="checkbox" value="three"> three</label>
+        <button>submit</button>
+    </form>
+    <script>
+        /* exported getCheckboxGroup */
+
+        function getCheckboxGroup() {
+            const form = document.getElementById('form');
+            const group = form.elements.group;
+
+            for(var i = 0; i < group.length; i++) {
+                console.log(group[i]);
+            }
+
+            return false;
+        }
+    </script>
+</body>
+</html>
