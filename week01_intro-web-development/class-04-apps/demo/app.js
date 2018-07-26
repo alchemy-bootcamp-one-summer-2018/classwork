@@ -15,35 +15,46 @@ function makePairs() {
     tries += 1;
 
     function getRandomStudent() {
-        var indexOne = getRandomIndex(copy.length);
+        var index = getRandomIndex(copy.length);
         // get student before we remove them
-        var studentOne = copy[indexOne];
+        var student = copy[index];
         // remove from the array
-        copy.splice(indexOne, 1);
+        copy.splice(index, 1);
 
-        return studentOne;
+        return student;
+    }
+    
+    
+    // Store the pairs in an array
+    var pairs = [];
+    while(copy.length > 0) {
+        // make one pair
+        var studentOne = getRandomStudent();
+        var studentTwo = getRandomStudent();
+        var pair = [studentOne, studentTwo];
+        pairs.push(pair);
+
+        // manage odd last person
+        if(copy.length === 1) {
+            // this both returns the last item,
+            // _and_ takes it out of the copy array
+            pair.push(copy[0]);
+            break;
+        }
     }
 
-    // make one pair
-    var studentOne = getRandomStudent();
-    var studentTwo = getRandomStudent();
+    for(var i = 0; i < 10; i++) {
+        var pairToDisplay = pairs[i];
+        var display = '';
+        if(pairToDisplay) {
+            display = pairToDisplay.join(' - ');
+        }
 
-    
+        document.getElementById('pair-' + i).innerText = display;
+    }
 
-    // how to not reassign people or match people to self?
-        // 1. remove from array
-
-    // manage odd last person
-
-
-    // display results
-        // pairs
-            // manage reset (old pairs gone)
-    // display the one pair
-    document.getElementById('pair-0').innerText = studentOne + ' - ' + studentTwo; 
     // update tries
     document.getElementById('tries').innerText = tries;
-
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
