@@ -1,11 +1,11 @@
 /* exported assert, test */
 
 function assert(success, message) {
-    if(!success) throw new Error(message || 'assertion error');
+    if(!success) throw new Error(message || 'expected true but was false');
 }
 
 assert.equal = function(actual, expected, message = '') {
-    message += actual + ' does not equal ' + expected;
+    message += 'expected ' + expected + ' but was ' + actual;
     // eslint-disable-next-line eqeqeq
     assert(actual == expected, message);
 };

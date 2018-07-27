@@ -18,7 +18,11 @@ test.run = function() {
 
 var PASS = {
     text: 'PASS',
-    color: 'green'
+    color: 'green',
+    toString: function() {
+        return 'noodel';
+    }
+
 };
 
 var FAIL = {
@@ -49,7 +53,6 @@ function runTests() {
 }
 
 function displayResults(tests) {
-    
     for(var i = 0; i < tests.length; i++) {
         var test = tests[i];
 
@@ -61,7 +64,7 @@ function displayResults(tests) {
         if(test.error) {
             console.log(
                 '\t%c' + test.error || '', 
-                'color: red;'
+                'color: ' + FAIL.color + ';'
             );
         }
     }
