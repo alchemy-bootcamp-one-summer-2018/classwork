@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tested Functions</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+
+    <main>
+        <p>
+            <label>
+                <span class="variable">x:</span>
+                <input id="x" type="number">
+            </label>
+
+            <span id="operator">&nbsp;</span>
+
+            <label>
+                <span class="variable">y:</span>
+                <input id="y" type="number">
+            </label>
+
+            <span>=</span>
+
+            <span id="result">?</span>
+        </p>
+
+
+        <p>
+            <button name="add" onclick="calculate(this.name)">plus</button>
+            <button name="subtract" onclick="calculate(this.name)">minus</button> 
+            <button name="multiply" onclick="calculate(this.name)">times</button> 
+            <button name="divide"  onclick="calculate(this.name)">divide</button>
+        </p>
+    </main> 
+
+    <script src="calc.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>

@@ -1,17 +1,24 @@
-/* exported add, subtract, multiply, divide */
+/* exported calc */
 
-function add(x, y) {
-    return x + y;
-}
+var calc = {
+    add: function(x, y) {
+        return x + y;
+    },
 
-function subtract(x, y) {
-    return x - y;
-}
+    subtract: function(x, y) {
+        return x - y;
+    },
 
-function multiply(x, y) {
-    return x * y;
-}
+    multiply: function(x, y) {
+        return x * y;
+    },
 
-function divide(x, y) {
-    return x / y;
-}
+    divide: function(x, y) {
+        return x / y;
+    },
+};
+
+calc.add.symbol = '+';
+calc.subtract.symbol = '-';
+calc.multiply.symbol = '*';
+calc.divide.symbol = '/';
