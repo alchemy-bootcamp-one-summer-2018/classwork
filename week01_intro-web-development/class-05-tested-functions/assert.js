@@ -5,13 +5,13 @@ function assert(success, message) {
 }
 
 assert.equal = function(actual, expected, message = '') {
+    message += actual + ' does not equal ' + expected;
     // eslint-disable-next-line eqeqeq
-    assert(actual == expected, actual + ' ' + expected + message);
+    assert(actual == expected, message);
 };
 
 // change to true to run assert and assert equals tests
 if(false) { // eslint-disable-line
-
 
     try {
         assert(true);
