@@ -1,4 +1,36 @@
+Class 06: Layout, Color, Text
 
+## Misc
+* Feedback
+    * Organization
+    * Hard Week
+    * Myth of the "for people who know coding"
+        * There is currently no grade indication this is remotely true
+        * Everyone is 94%-100%
+        * Do you have skill be able to access other's skills and abilities?
+        * People who "know stuff" have other struggles
+            * Messy code
+            * Don't follow instruction
+            * Weak in other areas
+            * They will hit a challenging week and will not know how to deal with it
+    * Live Coding
+        * I like it
+        * You like it
+        * Annotate it
+        * Generally code-along _not required_
+    * ?
+* Code Review
+    * Show games
+    * Volunteers to show code
+* ?
+
+## Week Summary
+
+1. Monday - HTML, CSS, Layout, Color, Text
+1. Tuesday - DOM and Templating
+1. Wednesday - Forms and Events
+1. Thursday - Components and Component Architectures
+1. Friday - TBD
 
 ## Layout
 
@@ -12,6 +44,8 @@
 
 [learnlayout.com](http://learnlayout.com) will be our practical entry point into layout
 
+- `position`
+- `display`
 - Box width, height, overflow
 - Border, margin, & padding
 - Border width, style, & color
@@ -46,6 +80,8 @@
 
 * Fonts at [Google Fonts](https://fonts.google.com) and [Font Squirrel](https://www.fontsquirrel.com/)
 * Color inspiration at [Colors](https://www.colourlovers.com/)
+* [Color Palettes](https://coolors.co/)
+* [Build Colors From Image](https://www.canva.com/color-palette/)
 * CSS inpiration at [CSS Zen Garden](http://www.csszengarden.com/)
 * Free Image Editor [GIMP](https://www.gimp.org/)
 * Free Images at [Unsplash](https://unsplash.com/)
