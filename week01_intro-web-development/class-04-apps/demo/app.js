@@ -24,7 +24,6 @@ function makePairs() {
         return student;
     }
     
-    
     // Store the pairs in an array
     var pairs = [];
     while(copy.length > 0) {

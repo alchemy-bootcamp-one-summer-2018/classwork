@@ -34,5 +34,8 @@ img {
     right: 0;
     padding-bottom: 3px;
     background: #aaa;
+    color: white;
+    font-family: sans-serif;
+    text-shadow: 1px 1px #777;
     text-align: center;
 }

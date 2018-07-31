@@ -2,7 +2,7 @@
 
 (function(module) {
 
-    module.fruits = [{
+    var fruits = [{
         name: 'orange',
         color: 'orange',
         image: 'images/orange.png'
@@ -24,4 +24,6 @@
         image: 'images/mango.png'
     }];
 
-}());
+    module.fruits = fruits;
+
+})(window.module = window.module || {});

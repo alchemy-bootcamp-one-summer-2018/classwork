@@ -42,18 +42,36 @@ Top-level variables and functions can "collide" across files
 'use strict';
 
 (function(module) {
-    // assign variables for "imported" things from other files
-    var greet = module.greet;
+    var findDuplicates = module.findDuplicates;
 
-    // body/work of module
-    // function render() {
+    // ...
 
-    // }
 
-    // assign properties for things "exported" from this module
-    module.render = render;
+    module.renderSalesData = render;
 
 }(window.module = window.module || {}));
+```
+
+### ES Modules
+
+IIFE _was_ best vanilla (no-build-system) option, but let's look at [ES5 Modules](https://caniuse.com/#feat=es6-module)
+
+Advantages:
+
+* Built-in
+* Very clear `import` `from` and `export` syntax
+* Cleaner file (no indent just for module system)
+* No `use strict` needed!
+* Progressive module loading based on entry point!
+* Named exports
+
+Need to modify `.eslintrc`:
+
+```json
+"parserOptions": {
+      "ecmaVersion": 8,
+      "sourceType": "module", // add this setting
+      ...
 ```
 
 ### Scope...
@@ -71,11 +89,6 @@ Document Object Model offers a JavaScript API for creating and manipulating the 
 Create an element:
 
 * `let content = document.createElement('p')`;
-
-Append and remove elements
-
-* `document.body.appendChild(p);`
-* `p.remove();`
 
 Get element(s):
 
