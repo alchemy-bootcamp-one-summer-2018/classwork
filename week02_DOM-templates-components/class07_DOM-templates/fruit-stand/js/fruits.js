@@ -24,6 +24,10 @@
         image: 'images/mango.png'
     }];
 
+    // for(var i = 0; i < fruits.length; i++) {
+    //     fruits[i].someProperty = 'prop';
+    // }
+
     module.fruits = fruits;
 
 })(window.module = window.module || {});
