@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Fruit Stand</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Available Fruits</h2>
+            <p>Chose from one of over <span id="fruit-count"></span> delicious fruits!</p>
+            <ul id="fruits"></ul>
+        </section>
+
+        <section>
+            <h2>Add A Fruit</h2>
+            <form id="add-fruit">
+                <p>
+                    <label>
+                        Name:
+                        <input name="name" required>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Color:
+                        <input name="color" required>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Image:
+                        <input name="image" required>
+                    </label>
+                </p>
+
+                <p>
+                    <button>Add</button>
+                </p>
+
+                <p class="error"></p>
+                    
+            </form>
+        </section>
+    </main>
+
+    <template id="fruit-template">
+        <li>
+            <h3></h3>
+            <img>
+            <span class="color-name"></span>
+        </li>
+    </template>
+
+    <script src="js/toDOM.js"></script>
+    <script src="js/fruits.js"></script>
+    <script src="js/fruit-list.js"></script>
+    <script src="js/fruit-form.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/index.js"></script>
+        
+</body>
+</html>

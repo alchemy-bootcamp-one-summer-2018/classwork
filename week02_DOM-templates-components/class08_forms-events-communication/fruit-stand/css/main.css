@@ -1,0 +1,44 @@
+body {
+    font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid #aaa;
+    padding: 0 10px;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 3px;
+    color: rgb(20, 50, 20);
+}
+
+img {
+    width: 100px;
+}
+
+.color-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 0;
+    background: #aaa;
+    color: white;
+    font-family: sans-serif;
+    text-shadow: 1px 1px #777;
+    text-align: center;
+}
