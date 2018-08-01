@@ -19,6 +19,9 @@
             try {
                 onFruitAdded(fruit);
                 form.reset();
+                // un-focus whatever input user may have been in
+                document.activeElement.blur();
+                // (or set focus name input)
             }
             catch(err) {
                 error.textContent = err.message;
