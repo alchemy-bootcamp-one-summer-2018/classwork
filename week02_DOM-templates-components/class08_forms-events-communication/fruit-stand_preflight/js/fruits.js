@@ -24,19 +24,20 @@
         image: 'mango.png'
     }];
 
+    // do the "augmentation" of the data
     function addKey(fruit) {
         fruit.key = fruit.name.split('').reverse().join();
     }
 
+    // initialize the fruits at the start
+    for(var i = 0; i < fruits.length; i++) {
+        addKey(fruits[i]);
+    }
+
+    // expose an "action" function for adding a fruit
     function addFruit(fruit) {
         addKey(fruit);
         fruits.push(fruit);
-    }
-    
-    // initialize the fruits at the start
-    for(var i = 0; i < fruits.length; i++) {
-        // do the "augmentation" of the data
-        addKey(fruits[i]);
     }
 
     module.fruits = fruits;

@@ -1,15 +1,12 @@
 'use strict';
 
 (function(module){
-    var initForm = module.initForm;
-    var addFruit = module.addFruit;
-    var updateFruitList = module.updateFruitList;
-    var updateCounter = module.updateCounter;
+    let initFruitForm = module.initFruitForm;
+    let addFruit = module.addFruit;
 
-    initForm(function(fruit) {
+    initFruitForm(function onFruitAdded(fruit) {
         addFruit(fruit);
-        updateFruitList();
-        updateCounter();
     });
+
 
 })(window.module = window.module || {});

@@ -4,6 +4,10 @@ DOM Events and Form Validation plus Communication
 ## Misc, Feedback, Questions, Issues
 * ?
 
+## Lets use `let`
+
+`let` is blocked scope
+
 ## DOM events
 
 ### Subscribing

@@ -42,11 +42,3 @@ img {
     text-shadow: 1px 1px #777;
     text-align: center;
 }
-
-input:valid {
-    border: 1px solid green;
-}
-
-input:invalid {
-    background: lightpink;
-}

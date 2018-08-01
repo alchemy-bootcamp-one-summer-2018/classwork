@@ -1,35 +1,30 @@
 'use strict';
 
 (function(module){
-    var form = document.getElementById('add-fruit');
-    var error = form.querySelector('p.error');
-    var elements = form.elements;
+    let form = document.getElementById('add-fruit');
 
-    function initForm(onFruitAdded) {
+    function initFruitForm(onFruitAdded) {
 
         form.addEventListener('submit', function(event) {
+            // #1 Prevent default posting of the form
             event.preventDefault();
     
-            var fruit = {
+            // #2 Gather up data
+            let elements = form.elements;
+    
+            let fruit = {
                 name: elements.name.value,
                 color: elements.color.value,
                 image: elements.image.value
             };
     
-            try {
-                onFruitAdded(fruit);
-                form.reset();
-                // un-focus whatever input user may have been in
-                document.activeElement.blur();
-                // (or set focus name input)
-            }
-            catch(err) {
-                error.textContent = err.message;
-            }
+            // #3 Call action
+            onFruitAdded(fruit);
+    
+            // #4 Process success or failure
         });
-        
     }
 
-    module.initForm = initForm;
+    module.initFruitForm = initFruitForm;
 
 })(window.module = window.module || {});
