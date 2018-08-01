@@ -2,6 +2,7 @@
 
 (function(module){
     let form = document.getElementById('add-fruit');
+    let error = document.getElementById('form-error');
 
     function initFruitForm(onFruitAdded) {
 
@@ -19,9 +20,18 @@
             };
     
             // #3 Call action
-            onFruitAdded(fruit);
+            try {
+                error.textContent = '';
+                onFruitAdded(fruit);
+                // #4 Process success or failure
+                form.reset();
+                document.activeElement.blur();
+            }
+            catch(err) {
+                // #4 Process success or failure
+                error.textContent = err.message;
+            }
     
-            // #4 Process success or failure
         });
     }
 

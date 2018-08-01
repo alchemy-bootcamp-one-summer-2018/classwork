@@ -29,6 +29,9 @@
     }
 
     function addFruit(fruit) {
+        if(fruit.name === 'cantaloupe') {
+            throw new Error('Sorry, Lauren hates those');
+        }
         addKey(fruit);
         fruits.push(fruit);
     }
