@@ -70,11 +70,11 @@ Use functions and template literals to create blocks of html. You can use more t
 
 ```js
 
-let template = function(data) {
+let template = function(name, description) {
     return html`
         <li>
-            <h2></h2>
-            <p class="content"></p>
+            <h2>${name}</h2>
+            <p class="content">${description}</p>
         </li>
     `;
 }
@@ -108,7 +108,7 @@ class MyComponent {
 
     render() {
         // render from template
-        let dom = template(this.data1, this.data2);
+        let dom = template(this.name, this.description);
 
         // Get reference to need elements.
         // If only used in render, use a variable:
@@ -125,10 +125,8 @@ class MyComponent {
             }
         });
 
-        // set initial values
-        header.textContent = this.name;
-        // use common methods
-        this.updateDescription(this.description);
+        li.appendChild(child);
+
 
         // subscribe to events
         li.addEventListener('click', () => {

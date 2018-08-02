@@ -53,9 +53,30 @@ We create classes as functions. Uphill. Both ways.
 
 ## Arrow Functions
 
-Maintaining `this` context:
+When we use callback functions inside of classes, we
+may lose the `this` context inside our callbacks. The solution
+is Arrows Functions
 
-* Use arrow functions anytime you are passing a function to another function (callbacks)! 
+Compare to `function`
+
+```js
+function(x) {
+    return x + 5;
+}
+```
+
+_becomes_
+
+```js
+(x) => {
+     return x + 5;
+}
+```
+
+Remove `function` keyword and put `=>` between parameters and function block.
+
+Rule for now:
+* Use arrow functions anytime you are passing a function to another function (callbacks)!
 
 ## Update `html`
 
