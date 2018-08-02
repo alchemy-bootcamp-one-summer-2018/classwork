@@ -1,0 +1,66 @@
+body {
+    font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 125px;
+    height: 200px;
+    margin: 5px;
+    border: 1px solid #aaa;
+    padding: 0 10px;
+    opacity: .8;
+    cursor: pointer;
+}
+
+li:hover {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+}
+
+h3 {
+    margin-top: 3px;
+    color: rgb(20, 50, 20);
+}
+
+img {
+    width: 100px;
+}
+
+.color-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 0;
+    background: #aaa;
+    color: white;
+    font-family: sans-serif;
+    text-shadow: 1px 1px #777;
+    text-align: center;
+}
+
+li button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    padding: 0;
+    border: 0;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.error {
+    color: red;
+    font-weight: bolder;
+}
