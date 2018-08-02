@@ -8,6 +8,26 @@ Class 09: Components
 
 **Always** named in `TitleCase`
 
+### Use
+
+* In modern JavaScript, we don't generally use classes to do "domain modelling" (the data).
+* We do use classes as utilities and tools to do specific jobs.
+* We use POJOs (Plain Old JavaScript Objects) to represent data
+
+For Bootcamp I, we aren't going into low-level details of:
+
+* Prototypical Inheritance
+* Extending Classes (Polymorphism)
+
+These are covered in Career Track
+
+### What Are They Good For
+
+Classes allow us to:
+* Group a set of functions (methods) callable over time
+* Around a specific set of data common to all functions
+* In a repeatable way (we can make "more than one")
+
 ### Syntax
 
 Definition:
