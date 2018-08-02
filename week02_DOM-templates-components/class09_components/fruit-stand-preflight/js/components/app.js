@@ -22,14 +22,23 @@
             let main = dom.querySelector('main');
 
             let fruits = fruitApi.get();
-            let fruitList = new FruitList(fruits, (fruit) => {
-                fruitApi.remove(fruit);
-                fruitList.update(fruits);
+            let fruitList = new FruitList({
+                fruits: fruits, 
+                onRemove: (fruit) => {
+                    fruitApi.remove(fruit);
+                    fruitList.update({
+                        fruits: fruits
+                    });
+                }
             });
 
-            let fruitForm = new FruitForm((fruit) => {
-                fruitApi.add(fruit);
-                fruitList.update(fruits);
+            let fruitForm = new FruitForm({
+                onAdd: (fruit) => {
+                    fruitApi.add(fruit);
+                    fruitList.update({
+                        fruits: fruits
+                    });
+                }
             });
 
             main.appendChild(fruitList.render());

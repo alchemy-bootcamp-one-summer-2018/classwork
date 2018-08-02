@@ -42,8 +42,8 @@
     };
 
     class FruitForm {
-        constructor(onFruitAdd) {
-            this.onFruitAdd = onFruitAdd;
+        constructor(props) {
+            this.onFruitAdd = props.onAdd;
         }
 
         render() {

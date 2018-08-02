@@ -10,6 +10,10 @@
         fruits = JSON.parse(json);
     }
     else {
+        createFruits();
+    }
+
+    function createFruits() {
         fruits = [{
             name: 'orange',
             color: 'orange',
@@ -36,6 +40,9 @@
             addKey(fruits[i]);
         }
     }
+
+    // expose for dev purposes:
+    window.resetFruits = createFruits;
 
     window.addEventListener('beforeunload', () => {
         window.localStorage.setItem('fruits', JSON.stringify(fruits));

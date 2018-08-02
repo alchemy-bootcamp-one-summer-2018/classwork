@@ -15,13 +15,14 @@
     };
 
     class FruitList {
-        constructor(fruits, onFruitRemove) {
-            this.fruits = fruits;
-            this.lastFruits = fruits.slice();
-            this.onFruitRemove = onFruitRemove;
+        constructor(props) {
+            this.fruits = props.fruits;
+            this.lastFruits = this.fruits.slice();
+            this.onRemove = props.onRemove;
         }
 
-        update(fruits) {
+        update(props) {
+            let fruits = props.fruits;
             let lastFruits = this.lastFruits;
 
             // remove
@@ -43,7 +44,10 @@
         }
 
         renderFruit(fruit) {
-            let fruitCard = new FruitCard(fruit, this.onFruitRemove);
+            let fruitCard = new FruitCard({
+                fruit: fruit, 
+                onRemove: this.onRemove
+            });
             this.ul.appendChild(fruitCard.render());
         }
 

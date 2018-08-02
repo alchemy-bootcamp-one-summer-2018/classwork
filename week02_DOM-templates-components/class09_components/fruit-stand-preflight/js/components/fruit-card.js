@@ -17,17 +17,17 @@
     };
 
     class FruitCard {
-        constructor(fruit, onFruitDelete) {
-            this.fruit = fruit;
-            this.onFruitDelete = onFruitDelete;
+        constructor(props) {
+            this.fruit = props.fruit;
+            this.onRemove = props.onRemove;
         }
 
         render() {
             let dom = template(this.fruit);
-            let deleteButton = dom.querySelector('button');
+            let removeButton = dom.querySelector('button');
             
-            deleteButton.addEventListener('click', () => {
-                this.onFruitDelete(this.fruit);
+            removeButton.addEventListener('click', () => {
+                this.onRemove(this.fruit);
             });
 
             return dom;

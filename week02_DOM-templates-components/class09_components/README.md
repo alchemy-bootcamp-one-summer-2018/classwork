@@ -31,40 +31,17 @@ In the beginning...
 
 We create classes as functions. Uphill. Both ways.
 
-### Arrow Functions
+## Arrow Functions
 
 Maintaining `this` context:
 
-* Use arrow functions for callbacks!
+* Use arrow functions anytime you are passing a function to another function (callbacks)! 
 
-## Components
-
-### Component Classes
-
-* `constructor` should receive object with a property for each:
-    * Needed data
-    * Callback function `onEvent`
-* `render` method
-    * Called once for initial render
-    * Uses template function
-    * Child content
-        * Creates child components
-        * Calls their `render` methods
-        * Append to place in DOM
-        * (Don't use template literal!)
-    * Needs to return `dom` of component
-    * Store things you need later on `this`
-* `update` method
-    * Receives new data corresponding to data received in
-    constructor
-    * Conditionally checks for property changes and makes changes
-    * Delegate to other methods if there are many possible updates
-
-### Update `html`
+## Update `html`
 
 Update our help function to only need one call
 
-### `index.js` and App Component
+## `index.js` and App Component
 
 * All Html (except root) moves into components
 * `App` is your top level component.
