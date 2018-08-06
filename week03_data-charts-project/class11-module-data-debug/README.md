@@ -21,6 +21,27 @@ Class 11: Data, ES Modules, Debug
 
 ## Default and Named
 
-* If a module exports one main thing, use `export default`. This is what you are
-going to use 90% of the time.
-* If a module exports more than one thing, use `export`
+While ES Modules support multiple "named" exports (and imports), we are going to stick to a module exporting one main thing, so use `export default`. 
+
+## Debugging
+
+Let's debug while building out data services
+
+* Use Sources tab in Dev Tools
+* `CMD/CTRL` + `P` and type in name of file.
+* Breakpoints
+    * Set breakpoints in the gutter of the file
+    * Breakpoints window
+    * Conditional breakpoints
+* Run code, it stops
+    * `CMD/CTRL` + `\` - resume
+    * `CMD/CTRL` + `'` - step over
+    * `CMD/CTRL` + `;` - step into
+    * `CMD/CTRL` + `SHIFT` + `;` - step out of
+
+## Data
+
+Let's use `window.localStorage`!
+
+Create a `load-data.js`
+
