@@ -2,6 +2,7 @@ import html from '/js/html.js';
 import channelsApi from '../services/channels-api.js';
 import VideoViewer from './video-viewer.js';
 import ChannelSelector from './channel-selector.js';
+import Report from './report.js';
 
 let template = function() {
     return html`
@@ -12,6 +13,7 @@ let template = function() {
         <main>
             <section class="video-viewer"></section>
             <section class="channel-selector"></section>
+            <section class="report"></section>
         </main>
     `;
 };
@@ -25,8 +27,9 @@ export default class App {
     render() {
         let dom = template();
 
-        const firstChannel = this.channels[0];
-        firstChannel.count++;
+        let reportSection = dom.querySelector('.report');
+
+        let firstChannel = this.channels[0];
         
         let viewer = new VideoViewer({
             channel: firstChannel
@@ -39,7 +42,22 @@ export default class App {
             channels: this.channels,
             onSelect: (channel) => {
                 channel.count++;
-                viewer.update(channel);
+                this.totalCount++;
+
+                if(this.totalCount > 3) {
+                    // time to show results
+                    let report = new Report({
+                        results: this.channels
+                    });
+                    viewerSection.style.display = 'none';
+                    selectorSection.style.display = 'none';
+                    reportSection.appendChild(report.render());
+                }
+                else {
+                    viewer.update({
+                        channel: channel
+                    });
+                }
             }
         };
 

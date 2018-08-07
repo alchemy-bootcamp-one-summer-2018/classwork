@@ -18,8 +18,8 @@ export default class VideoViewer {
         this.channel = props.channel;
     }
 
-    update(channel) {
-        this.channel = channel;
+    update(props) {
+        this.channel = props.channel;
 
         this.header.textContent = this.channel.name;
         this.videoPlayer.src = this.channel.video;

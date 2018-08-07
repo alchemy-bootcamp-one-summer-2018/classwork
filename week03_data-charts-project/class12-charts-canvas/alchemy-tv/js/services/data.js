@@ -24,3 +24,9 @@ window.addEventListener('beforeunload', () => {
     // store in localStorage
     window.localStorage.setItem('data', json);
 });
+
+window.resetData = function() {
+    window.localStorage.removeItem('data');
+    data = undefined;
+    window.location.reload();
+};

@@ -100,6 +100,6 @@ section {
     margin: 10px 0;
 }
 
-#chart-container {
+.chart-container {
     height: 350px;
 }
