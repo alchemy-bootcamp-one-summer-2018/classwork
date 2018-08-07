@@ -3,14 +3,11 @@ import html from '../html.js';
 // services component needs to use
 import usersApi from '../services/users-api.js';
 import User from './user.js';
+import Header from './header.js';
 
 let template = function() {
     return html`        
-        <header>
-            <h1>Greg's List</h1>
-            <section class="user"></section>
-            <a href="my-items.html">My Items</a>
-        </header>
+        <header></header>
 
         <main>
             <h2>Items For Sale</h2> 
@@ -24,6 +21,10 @@ export default class ForSaleApp {
     render() {
         let dom = template(); 
         
+        let header = dom.querySelector('header');
+        let appHeader = new Header();
+        header.appendChild(appHeader.render());
+
         return dom;
     }
 }

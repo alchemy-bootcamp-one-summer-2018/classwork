@@ -3,8 +3,9 @@ import html from '../html.js';
 let template = function() {
     return html`
         <form>
+
             <input name="username" required>
-            <button>Log In</button>
+            <button>Sign In</button>
         </form>
     `;
 };
