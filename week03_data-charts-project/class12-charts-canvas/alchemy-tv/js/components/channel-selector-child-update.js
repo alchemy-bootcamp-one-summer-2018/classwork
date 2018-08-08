@@ -11,25 +11,15 @@ export default class ChannelSelector {
     constructor(props) {
         this.channels = props.channels;
         this.onSelect = props.onSelect;
+        this.childChannels = [];
     }
 
     update(props) {
         this.channels = props.channels;
-
-        while(this.ul.lastElementChild) {
-            this.ul.lastElementChild.remove();
-        }
-
-        this.renderList();
-    }
-
-    renderList() {
-        for(let i = 0; i < this.channels.length; i++) {
-            let channel = new Channel({
-                channel: this.channels[i], 
-                onSelect: this.onSelect
+        for(let i = 0; i < this.childChannels; i++) {
+            this.childChannels[i].update({
+                channel: this.channels[i]
             });
-            this.ul.appendChild(channel.render());
         }
     }
 
@@ -37,7 +27,14 @@ export default class ChannelSelector {
         let dom = template();
         this.ul = dom.querySelector('ul');
 
-        this.renderList();
+        for(let i = 0; i < this.channels.length; i++) {
+            let channel = new Channel({
+                channel: this.channels[i], 
+                onSelect: this.onSelect
+            });
+            this.childChannels.push(channel);
+            this.ul.appendChild(channel.render());
+        }
 
         return dom;
     }
