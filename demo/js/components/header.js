@@ -45,7 +45,7 @@ export default class Header {
     render() {
         let dom = template();
         this.userSection = dom.querySelector('section');
-        this.renderUser();
+        // this.renderUser();
         return dom;
     }
 }

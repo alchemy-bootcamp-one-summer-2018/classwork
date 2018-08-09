@@ -28,7 +28,7 @@ window.addEventListener('beforeunload', () => {
 });
 
 // handy function for resetting data, in the console, type:
-// > resetData(); 
+// > resetData() 
 window.resetData = function() {
     window.localStorage.removeItem('data');
     data = undefined;

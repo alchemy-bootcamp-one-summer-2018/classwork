@@ -1,0 +1,163 @@
+body {
+    font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#root {
+    display: grid;
+    grid-template-rows: 75px auto 50px;
+    width: 100vw;
+    height: 100vh;
+}
+
+#fruit-order {
+    display: grid;
+    grid-template-columns: 70vh auto;
+    width: 100vw;
+}
+
+header {
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+    background: steelblue; 
+    padding: 0 10px;
+    color: white;
+}
+
+nav ul {
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+}
+
+main {
+    padding: 10px;
+}
+
+section {
+    margin: 10px 0 10px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    background: steelblue;
+    color: white;
+
+}
+
+.fruit-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fruit-card {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 125px;
+    height: 200px;
+    margin: 5px;
+    border: 1px solid #aaa;
+    opacity: .8;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #aaa;
+}
+
+.fruit-card:hover {
+    opacity: 1;
+    box-shadow: 2px 2px 3px rgb(131, 131, 131);
+    transform: translateY(-1px) scale3d(1.01, 1.01, 1);
+    transition: all 350ms cubic-bezier(0.675, 0.065, 0.465, 1.315);
+}
+
+/*
+.fruit-card.selected {
+    border: 1px solid rgb(20, 50, 20);
+}
+*/
+
+
+@keyframes spin {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+h1 {
+    animation: spin 1s 1;
+}
+
+
+h3 {
+    margin: 0;
+    margin-bottom: 3px;
+    padding: 3px 0;
+    color: rgb(20, 50, 20);
+}
+
+li.selected h3 {
+    background: rgb(20, 50, 20);
+    color: white;
+}
+
+img {
+    width: 100px;
+}
+
+.color-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 0;
+    background: #aaa;
+    color: white;
+    font-family: sans-serif;
+    text-shadow: 1px 1px #777;
+    text-align: center;
+}
+
+li button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    padding: 0;
+    border: 0;
+    font-size: 14px;
+    color: #aaa;
+    background: transparent;
+}
+
+.fruit-form {
+    background: lightgreen;
+    border: 1px solid green;
+    padding: 3px;
+}
+
+label {
+    margin-left: 5px;
+}
+
+.error {
+    color: red;
+    font-weight: bolder;
+}
